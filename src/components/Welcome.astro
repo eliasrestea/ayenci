@@ -1,7 +1,30 @@
-<div class="relative h-screen overflow-hidden bg-radial from-stone-800 to-black flex items-center justify-center">
-  <!-- Text -->
-  <p class="text-5xl tracking-[.3em] font-light bg-gradient-to-br from-stone-50 to-stone-700 bg-clip-text text-transparent z-10 relative">
-    REȘTEA
-  </p>
+<div class="relative">
+  <div class="h-[300vh] relative z-0">
 
+    <!-- Distortion overlay (like a gravity lens) -->
+
+    <div id="stars1" class="absolute inset-0 z-20 pointer-events-none"></div>
+    <div id="stars2" class="absolute inset-0 z-20 pointer-events-none"></div>
+    <div id="stars3" class="absolute inset-0 z-20 pointer-events-none"></div>
+
+    <div class="sticky top-0 h-screen flex items-center justify-center z-10 bg-radial from-stone-800 to-black">
+      <p class="text-4xl tracking-[.3em] font-light bg-gradient-to-br from-stone-50 to-stone-700 bg-clip-text text-transparent">
+        REȘTEA
+      </p>
+    </div>
+  </div>
 </div>
+
+<!--<script is:inline>-->
+<!--  const stars1 = document.getElementById("stars1");-->
+<!--  const stars2 = document.getElementById("stars2");-->
+<!--  const stars3 = document.getElementById("stars3");-->
+
+<!--  window.addEventListener("scroll", () => {-->
+<!--    const scrollY = window.scrollY;-->
+<!--stars1.style.transform = `translateY(${scrollY * 0.3}px) rotate(${scrollY * 0.01}deg)`;-->
+<!--stars2.style.transform = `translateY(${scrollY * 0.6}px) skewY(${scrollY * 0.005}deg)`;-->
+<!--stars3.style.transform = `translateY(${scrollY * 1}px) scale(${1 + scrollY * 0.00005})`;-->
+
+<!--  });-->
+<!--</script>-->

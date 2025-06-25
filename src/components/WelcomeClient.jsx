@@ -69,7 +69,8 @@ export default function WelcomeClient() {
             function animate() {
                 life++;
                 if (life > maxLife) {
-                    comet.remove();
+                    comet.style.opacity = '0';
+                    setTimeout(() => comet.remove(), 800); // match your transition duration
                     return;
                 }
 

@@ -64,7 +64,7 @@ export default function WelcomeClient() {
             comet.style.top = `0px`;
 
             let life = 0;
-            const maxLife = 3000;
+            const maxLife = 2500;
 
             function animate() {
                 life++;
@@ -98,7 +98,7 @@ export default function WelcomeClient() {
         }
 
         setInterval(() => {
-            const howMany = Math.floor(Math.random() * 2) + 2;
+            const howMany = Math.floor(Math.random() * 2) + 1;
             for (let i = 0; i < howMany; i++) spawnComet();
         }, 2500);
     }, []);

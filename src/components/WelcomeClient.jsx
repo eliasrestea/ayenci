@@ -3,7 +3,17 @@ import { useEffect } from 'react';
 
 export default function WelcomeClient() {
     useEffect(() => {
+        const text = document.getElementById('rst-text');
 
+        if (text) {
+            window.addEventListener('scroll', () => {
+                const scrollY = window.scrollY;
+                const max = window.innerHeight;
+                const progress = Math.min(scrollY / max, 1);
+
+                text.style.transform = `translateY(-${progress * 46}vh) scale(${1 - progress * 0.7})`;
+            });
+        }
         const container = document.getElementById('comet-container');
         window.addEventListener('mousemove', (e) => {
             mouseX = e.clientX;

@@ -3,19 +3,20 @@ import WelcomeClient from './WelcomeClient.jsx';
 import "../styles/welcome.css"
 ---
 <div class="relative">
-  <div class="h-[300vh] relative z-0 ">
-
-    <div id="stars1" class="absolute inset-0 z-20 pointer-events-none"></div>
-    <div id="stars2" class="absolute inset-0 z-20 pointer-events-none"></div>
-    <div id="comet-container" class="pointer-events-none fixed inset-0 z-30"></div>
+  <div class="fixed inset-0 z-10 pointer-events-none">
+    <div id="stars1" class="absolute inset-0 z-20"></div>
+    <div id="stars2" class="absolute inset-0 z-20"></div>
+    <div id="comet-container" class="absolute inset-0 z-30"></div>
     <div id="grid-cursor"></div>
-
+  </div>
+  <div class="h-[300vh] relative z-0 ">
     <div class="sticky top-0 h-screen flex items-center justify-center z-10 bg-radial from-stone-800 to-black">
-      <p class="text-4xl tracking-[.3em] font-light bg-gradient-to-br from-stone-50 to-stone-700 bg-clip-text text-transparent">
-        REȘTEA
+      <p id="rst-text" class="transition-all duration-700 text-9xl tracking-[.3em] font-light bg-gradient-to-br from-stone-50 to-stone-500 bg-clip-text text-transparent">
+        RST
       </p>
     </div>
   </div>
 </div>
 
 <WelcomeClient client:load />
+

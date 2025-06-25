@@ -1,0 +1,78 @@
+
+#stars1 {
+  background-image: url('/stars1.png');
+  background-repeat: repeat;
+  background-size: 100px 100px;
+  animation: starDrift1 120s linear infinite;
+  opacity: 0.7;
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+#stars2 {
+  background-image: url('/stars2.png');
+  background-repeat: repeat;
+  background-size: 600px 600px;
+  animation: starDrift2 50s linear infinite;
+  opacity: 0.8;
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+
+@keyframes starDrift1 {
+  from { background-position: 0 0; }
+  to   { background-position: 0 -400px; }
+}
+@keyframes starDrift2 {
+  from { background-position: 0 0; }
+  to   { background-position: 0 -600px; }
+}
+.comet {
+  position: fixed;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: white;
+  opacity: 0.8;
+  filter: drop-shadow(0 0 6px white) blur(0.5px);
+  pointer-events: none;
+  z-index: 30;
+}
+
+
+@keyframes comet-fly {
+  from {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translate(var(--dx), var(--dy)) scale(1.4);
+    opacity: 0;
+  }
+}
+#grid-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 99;
+  opacity: 0;
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255,255,255,1) 0%, transparent 50%);
+  -webkit-mask-image: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255,255,255,1) 0%, transparent 50%);
+  transition:
+    mask-image 0.2s ease,
+    -webkit-mask-image 0.2s ease,
+    opacity 0.3s ease;
+}
+#grid-cursor.active {
+  opacity: 1;
+}

@@ -1,7 +1,7 @@
-// src/components/WelcomeClient.jsx
+// src/components/Stars.jsx
 import { useEffect } from 'react';
 
-export default function WelcomeClient() {
+export default function Stars() {
     useEffect(() => {
         const text = document.getElementById('rst-text');
 

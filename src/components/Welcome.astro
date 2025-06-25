@@ -1,6 +1,7 @@
 ---
-import WelcomeClient from './WelcomeClient.jsx';
+import Stars from './Stars.jsx';
 import "../styles/welcome.css"
+import WordAnimation from './WordAnimation.jsx';
 ---
 <div class="relative">
   <div class="fixed inset-0 z-10 pointer-events-none">
@@ -9,14 +10,32 @@ import "../styles/welcome.css"
     <div id="comet-container" class="absolute inset-0 z-30"></div>
     <div id="grid-cursor"></div>
   </div>
-  <div class="h-[300vh] relative z-0 ">
+  <div class="relative z-0">
     <div class="sticky top-0 h-screen flex items-center justify-center z-10 bg-radial from-stone-800 to-black">
-      <p id="rst-text" class="transition-all duration-700 text-9xl tracking-[.3em] font-light bg-gradient-to-br from-stone-50 to-stone-500 bg-clip-text text-transparent">
-        RST
-      </p>
+      <p id="rst-text" class="transition-all text-center duration-700 text-9xl tracking-widest font-light bg-gradient-to-br from-stone-50 to-stone-500 bg-clip-text text-transparent">RST</p>
     </div>
+
+
+    <section id="word-section" class="relative z-20 w-full h-[300vh] px-12 ">
+      <!-- This is fixed, stays on screen during scroll -->
+      <div class="fixed top-48 left-32 text-white space-y-8 transition duration-700 ease-in-out">
+        <p class="text-line text-4xl">
+          AI nu este viitorul
+        </p>
+        <p class="text-line text-4xl">
+          E prezentul
+        </p>
+        <p class="text-line text-4xl">
+          Folosește-l (nu mi place)
+        </p>
+      </div>
+    </section>
+
+
+
+    <div class="relative h-screen"></div>
   </div>
 </div>
 
-<WelcomeClient client:load />
-
+<Stars client:load />
+<WordAnimation client:only="react" />

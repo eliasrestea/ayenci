@@ -12,6 +12,7 @@
     "@astrojs/react": "^4.3.0",
     "@tailwindcss/vite": "^4.1.10",
     "astro": "^5.9.2",
+    "gsap": "^3.13.0",
     "reac": "^0.0.0",
     "react-dom": "^19.1.0",
     "tailwindcss": "^4.1.10"

@@ -1,24 +1,25 @@
 ---
 import "../styles/hero.css"
-import TextEffects from './TextEffects.jsx';
 ---
-  <div class="sticky top-0 h-screen flex flex-col items-center justify-center z-10">
-    <p id="rst-text" class="transition-all text-center duration-700 text-9xl tracking-wide font-light bg-gradient-to-br from-stone-50 to-stone-500 bg-clip-text text-transparent">R S T</p>
-    <p id="subline-text" class="relative z-10 mt-6 text-xl text-stone-400 font-light tracking-widest transition-all duration-500 ease-out will-change-transform will-change-opacity">
-      AI, DESIGNED TO WORK FOR YOU.
-    </p>
-  </div>
-  <div id="scroll-arrow" class="fixed bottom-2 left-1/2 transform -translate-x-1/2 z-30 animate-bounce transition-all duration-500 ease-out will-change-transform will-change-opacity">
-    <svg
-        class="w-6 h-6 text-stone-400"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="1.5"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-    >
-      <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-    </svg>
-  </div>
-<TextEffects client:load />
+<div class="sticky top-0 h-screen flex flex-col items-center justify-center z-10">
+  <p id="hero-logo"
+     class="transition-all duration-500 ease-in-out text-center text-9xl tracking-wide font-light bg-gradient-to-br from-stone-50 to-stone-500 bg-clip-text text-transparent">
+    R S T
+  </p>
+  <p id="subline-text" class="relative z-10 mt-6 text-xl text-stone-400 font-light tracking-widest transition-all duration-500 ease-out will-change-transform will-change-opacity">
+    AI, DESIGNED TO WORK FOR YOU.
+  </p>
+</div>
+<div id="scroll-arrow" class="fixed bottom-2 left-1/2 transform -translate-x-1/2 z-30 animate-bounce transition-all duration-500 ease-out will-change-transform will-change-opacity">
+  <svg
+      class="w-6 h-6 text-stone-400"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.5"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+  >
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+  </svg>
+</div>

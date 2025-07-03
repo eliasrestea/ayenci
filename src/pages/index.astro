@@ -1,10 +1,13 @@
 ---
+import Navigation from '../components/Navigation.astro';
 import Hero from '../components/Hero.astro';
 import Layout from '../layouts/Layout.astro';
+import TextEffects from "../components/TextEffects";
 ---
 
 <Layout>
+	<Navigation />
 	<Hero />
-  <div class="h-screen relative"></div>
-
+	<div class="h-screen relative"></div>
 </Layout>
+<TextEffects client:load />

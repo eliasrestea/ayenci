@@ -4,7 +4,8 @@ import { useEffect } from 'react';
 export default function TextEffects() {
 
     useEffect(() => {
-        const text = document.getElementById('rst-text');
+        const heroLogo = document.getElementById('hero-logo');
+        const navLogo = document.getElementById('nav-logo');
         const subline = document.getElementById('subline-text');
         const arrow = document.getElementById('scroll-arrow');
 
@@ -13,9 +14,18 @@ export default function TextEffects() {
             const max = window.innerHeight;
             const progress = Math.min(scrollY / max, 1);
 
-            // Move and scale RST text
-            if (text) {
-                text.style.transform = `translateY(-${progress * 41}vh) scale(${1 - progress * 0.7})`;
+            // HERO: move up & shrink & fade out
+            if (heroLogo) {
+                const opacity = 1 - progress * 1.2;
+
+                heroLogo.style.transform = `translateY(-${progress * 41}vh) scale(${1 - progress * 0.7})`;
+                heroLogo.style.opacity = opacity < 0 ? '0' : `${opacity}`;
+            }
+
+            // NAV: fade in
+            if (navLogo) {
+                const navOpacity = progress * 1.5;
+                navLogo.style.opacity = navOpacity > 1 ? '1' : `${navOpacity}`;
             }
 
             // Fade out subline

@@ -1,17 +1,26 @@
 ---
+import Stars from '../components/Stars.jsx';
 import "../styles/global.css";
 ---
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Restea</title>
-	</head>
-	<body class="m-0 w-full h-full">
-		<main>
-			<slot />
-		</main>
-	</body>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<meta name="generator" content={Astro.generator} />
+	<title>Restea</title>
+</head>
+<body class="m-0 w-full h-full">
+<main class="relative">
+	<div class="fixed inset-0 pointer-events-none bg-radial from-stone-800 to-black">
+		<div id="stars1" class="absolute inset-0 z-20"></div>
+		<div id="stars2" class="absolute inset-0 z-20"></div>
+		<div id="comet-container" class="absolute inset-0 z-30"></div>
+		<div id="grid-cursor"></div>
+	</div>
+	<slot />
+</main>
+</body>
 </html>
+
+<Stars client:load />

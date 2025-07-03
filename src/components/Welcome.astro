@@ -1,7 +1,7 @@
 ---
 import Stars from './Stars.jsx';
 import "../styles/welcome.css"
-import WordAnimation from './WordAnimation.jsx';
+import TextEffects from './TextEffects.jsx';
 ---
 <div class="relative">
   <div class="fixed inset-0 z-10 pointer-events-none">
@@ -11,31 +11,30 @@ import WordAnimation from './WordAnimation.jsx';
     <div id="grid-cursor"></div>
   </div>
   <div class="relative z-0">
-    <div class="sticky top-0 h-screen flex items-center justify-center z-10 bg-radial from-stone-800 to-black">
-      <p id="rst-text" class="transition-all text-center duration-700 text-9xl tracking-widest font-light bg-gradient-to-br from-stone-50 to-stone-500 bg-clip-text text-transparent">RST</p>
+    <div class="sticky top-0 h-screen flex flex-col items-center justify-center z-10 bg-radial from-stone-800 to-black">
+      <p id="rst-text" class="transition-all text-center duration-700 text-9xl tracking-wide font-light bg-gradient-to-br from-stone-50 to-stone-500 bg-clip-text text-transparent">R S T</p>
+      <p id="subline-text" class="relative z-10 mt-6 text-xl text-stone-400 font-light tracking-widest transition-all duration-500 ease-out will-change-transform will-change-opacity">
+        AI, DESIGNED TO WORK FOR YOU.
+      </p>
     </div>
 
-
-    <section id="word-section" class="relative z-20 w-full h-[300vh] px-12 ">
-      <!-- This is fixed, stays on screen during scroll -->
-      <div class="fixed top-48 left-32 text-white space-y-8 transition duration-700 ease-in-out">
-        <p class="text-line text-4xl">
-          AI nu este viitorul
-        </p>
-        <p class="text-line text-4xl">
-          E prezentul
-        </p>
-        <p class="text-line text-4xl">
-          Folosește-l (nu mi place)
-        </p>
-      </div>
-    </section>
-
-
-
     <div class="relative h-screen"></div>
+    <div id="scroll-arrow" class="fixed bottom-2 left-1/2 transform -translate-x-1/2 z-30 animate-bounce transition-all duration-500 ease-out will-change-transform will-change-opacity">
+      <svg
+          class="w-6 h-6 text-stone-400"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+      </svg>
+    </div>
+
   </div>
 </div>
 
 <Stars client:load />
-<WordAnimation client:only="react" />
+<TextEffects client:load />
